@@ -1,7 +1,10 @@
 name: CI/CT workflow for Rust Actix Web service docker image
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - develop
+      - master
 
 jobs:
   set_stage:
