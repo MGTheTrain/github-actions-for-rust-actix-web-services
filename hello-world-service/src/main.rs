@@ -1,7 +1,6 @@
+use actix_web::{get, web, App, HttpServer, Responder, Result};
 use log::info;
-use actix_web::{get, web, App, HttpServer, HttpResponse, Responder, Result};
 use serde::Serialize;
-
 
 #[derive(Serialize)]
 struct HelloWorldResponse {
@@ -24,14 +23,11 @@ async fn hello() -> Result<impl Responder> {
 #[actix_web::main] // or #[tokio::main]
 async fn main() -> std::io::Result<()> {
     env_logger::init();
-    
-    HttpServer::new(move || {
-        App::new().
-            service(hello)
-    })
-    .bind(("0.0.0.0", 80))? // Listening on all available network interfaces or addresses on the machine
-    .run()
-    .await
+
+    HttpServer::new(move || App::new().service(hello))
+        .bind(("0.0.0.0", 80))? // Listening on all available network interfaces or addresses on the machine
+        .run()
+        .await
 }
 
 #[cfg(test)]
