@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@master
-      - name: Linting and auto-formatting Rust files
-        uses: MGTheTrain/github-actions/.github/actions/linting-and-auto-formatting-for-rust@main
+      - name: Auto-formatting Rust files
+        uses: MGTheTrain/github-actions/.github/actions/auto-formatting-for-rust@main
         with:
           WORKING_DIRECTORY: ./hello-world-service
           GH_TOKEN: ${{ inputs.GH_TOKEN }}
