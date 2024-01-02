@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2024-01-02
+
+### Added
+
+- [Github Action workflow for linting and auto-formatting](./.github/workflows/feature_branches.yml)
+
+### Fixed
+
+/
+
+### Changed
+
+/
+
+### Removed
+
+/
+
 ## [0.1.0] - 2023-12-31
 
 ### Added
