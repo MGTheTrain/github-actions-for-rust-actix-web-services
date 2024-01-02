@@ -8,7 +8,7 @@ struct HelloWorldResponse {
 }
 
 fn get_hello_world_message() -> HelloWorldResponse {
-    HelloWorldResponse {
+        HelloWorldResponse {
         message: String::from("Hello from Rust"),
     }
 }
