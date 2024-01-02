@@ -15,7 +15,7 @@ fn get_hello_world_message() -> HelloWorldResponse {
 
 #[get("/api/v1/hws")]
 async fn hello() -> Result<impl Responder> {
-        let obj = get_hello_world_message();
+    let obj = get_hello_world_message();
     info!("Hello from Rust");
     Ok(web::Json(obj))
 }
